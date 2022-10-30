@@ -1,0 +1,80 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Class Rank </title>
+    <link rel="stylesheet" href="{%  static 'css/pdfCss.css' %}" media="all" />
+  </head>
+  <body>
+    <header class="clearfix" style="margin: 0px">
+      <div id="logo">
+        <img src="{% static 'images/suranalogo.png' %}">
+      </div>
+      <div id="company">
+        <h1 class="name" style="text-align: center;margin: 0px">SURANA EDUCATIONAL INSTITUTIONS, BANGALORE - 560060</h1>
+        
+        
+        
+      </div>
+      </div>
+    </header>
+  
+    <main>
+      <div id="details" class="clearfix">
+        <div id="client">
+          <!-- <div class="to">INVOICE TO:</div> -->
+          <h2 class="name" style="text-align: center;color: red;margin: 0px">Class Rank list </h2>
+         
+          <table border="0" cellspacing="0" cellpadding="1" >
+
+	        <thead>
+	          <tr style="font-size: 7px">
+	            <td >Batch - {{batch}} </td>
+	            <td >Branch - {{branch}}</td>
+	            <td >Year/Semester - {{year}}</td>
+	            <td >Print Date : {{printDate}}</td>
+	            
+	            <!-- <th class="total">TOTAL</th> -->
+	          </tr>
+	        </thead>
+    	</table>
+         
+           </div>
+       <!--  <div id="invoice">
+          <h1>INVOICE 3-2-1</h1>
+          <div class="date">Due Date: 30/06/2014</div>
+        </div> -->
+      </div>
+      <table border="1" cellspacing="0" cellpadding="1">
+        <thead>
+          <tr >
+            <th >Rank</th>
+            <th >Register number</th>
+            <th >Name</th>
+            <th >Total marks</th>
+            
+            <!-- <th class="total">TOTAL</th> -->
+          </tr>
+        </thead>
+        <tbody style="text-align: center; font-size: 7px">
+        {% for i in marksWithDetailRnk %}
+          <tr>
+            <td >{{i.rank}}</td>
+            <td >{{i.roll}}</td>
+            <td >{{i.name}}</td>
+            <td >{{i.mark}}</td>
+            
+           <!--  <td class="total">$1,200.00</td> -->
+          </tr>
+        {% endfor %}  
+        
+        </tbody>
+       
+      </table>
+    </main>
+    <footer>
+      </footer>
+  </body>
+</html>

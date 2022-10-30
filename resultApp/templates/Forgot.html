@@ -1,0 +1,50 @@
+<html>
+<head> 
+</head>
+<body >
+
+<div class="login-wrap">
+	 <div class="login-html">
+<form action="send" method="POST">
+<table border=2 align="center">
+{% csrf_token %}
+<a><B>Enter mail ID:- </B> </a>
+<input type="text" name="email" placeholder="Enter Your Mail ID">
+<button type="submit">send</button>
+
+
+</form>{{send}}
+
+	
+	
+</body>
+</html>
+
+<style>
+body{
+  margin:0;
+  color:#6a6f8c;
+  background:rgba(40,57,101,.9);
+  font:600 16px/18px 'Open Sans',sans-serif;
+
+}
+
+.login-wrap{
+  width:100%;
+  margin:auto;
+  max-width:525px;
+  min-height:670px;
+    color:#fff;
+  position:relative;
+  background:url(https://upload.wikimedia.org/wikipedia/en/4/4b/Surana_College_Logo.png) no-repeat center;
+  box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+
+}
+.login-html{
+  width:100%;
+  height:100%;
+  position:absolute;
+  padding:90px 70px 50px 70px;
+
+ 
+}
