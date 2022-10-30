@@ -1,0 +1,12 @@
+h1{
+	color: red;
+	font-weight: 30px;
+}
+
+table,th,td{
+		text-align: center;
+		padding: 10px;
+}
+table{
+	border: 1px solid #050978;
+}
